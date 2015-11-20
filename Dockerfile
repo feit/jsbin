@@ -12,6 +12,8 @@ RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
 WORKDIR /opt/app
 ADD . /opt/app
 
+RUN /opt/app/node_modules/.bin/grunt build
+
 EXPOSE 80
 
 CMD ["/opt/app/bin/jsbin"]

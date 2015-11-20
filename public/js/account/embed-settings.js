@@ -3,6 +3,7 @@
   var $saveStatus = $('span.status');
   var saveTimer = null;
 
+  jsbin.user.settings = jsbin.user.settings || {}
   try { // shouldn't blow up, but... ¯\_(ツ)_/¯
     var editor = window.editor = CodeMirror.fromTextArea($('textarea')[0], $.extend({
       mode: 'text/css',
